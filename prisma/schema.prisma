@@ -32,7 +32,7 @@ model Link {
   description String
   rank        Int?
   public      Boolean  @default(true)
-  status      Int      @default(1) @db.Int
+  status      Int      @default(1) @db.SmallInt
   createdAt   DateTime @default(now()) @map(name: "created_at")
   updatedAt   DateTime @default(now()) @map(name: "updated_at")
   cid         String
