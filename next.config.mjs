@@ -5,16 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'cos.codefe.top',
-      },
-      {
-        protocol: 'https',
-        hostname: 'img.xnewstar.com',
-      },
-    ],
+    remotePatterns: [],
   }
 }
 
