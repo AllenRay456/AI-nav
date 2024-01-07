@@ -5,7 +5,7 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    remotePatterns: [],
+    domains: ['*'],
   }
 }
 
