@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import Script from 'next/script'
 
 export const metadata: Metadata = {
   title: {
@@ -33,7 +34,21 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head />
+        <head >
+          {/* 添加 Google Analytics 脚本 */}
+          <Script async src="https://www.googletagmanager.com/gtag/js?id=G-09T8P6V323" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-09T8P6V323');
+              `,
+            }}
+          />
+        </head>
+
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
