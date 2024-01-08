@@ -5,7 +5,12 @@ const nextConfig = {
     appDir: true,
   },
   images: {
-    domains: ['*'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   }
 }
 
