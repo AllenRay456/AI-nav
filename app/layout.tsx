@@ -35,6 +35,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <>
       <html lang="en" suppressHydrationWarning>
         <head >
+          <script type="application/ld+json" dangerouslySetInnerHTML={{
+            __html: `{
+              "@context" : "https://schema.org",
+              "@type" : "WebSite",
+              "name" : "AI指南针",
+              "url" : "https://toolbox.xnewstar.com/"
+            }`
+          }} />
           {/* 添加 Google Analytics 脚本 */}
           <Script async src="https://www.googletagmanager.com/gtag/js?id=G-09T8P6V323" />
           <script
