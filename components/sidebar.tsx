@@ -31,8 +31,11 @@ export function Sidebar({ className, navItems }: SidebarProps) {
             width={100}
             height={100}
           />
-          <p>AI指南针</p>
         </a>
+        <div>
+          <h1 className="text-xl text-center text-red-500">AI指南针</h1>
+          <h2 className="text-sm text-center text-red-500">通用/垂直人工智能应用导航站</h2>
+        </div>
         <div className="flex-start relative z-40 flex h-auto w-full flex-1 flex-col overflow-y-auto overflow-x-hidden rounded pt-4 opacity-100">
           <div className="flex list-none flex-col md:min-w-full md:flex-col">
             <div className={cn("flex-none pb-12", className)}>
