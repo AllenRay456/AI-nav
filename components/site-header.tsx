@@ -17,8 +17,8 @@ export async function SiteHeader({ navItems }: SidebarProps) {
         <MainNav items={siteConfig.mainNav} navItems={navItems} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            {/* <Link
-              href={siteConfig.links.github}
+            <Link
+              href={'https://forms.gle/AET8HUe6Y9QPdWvh7'}
               target="_blank"
               rel="noreferrer"
             >
@@ -28,11 +28,10 @@ export async function SiteHeader({ navItems }: SidebarProps) {
                   variant: "ghost",
                 })}
               >
-                <Icons.gitHub className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+                <span className="">提交共享AI资源</span>
               </div>
-            </Link> */}
-            <ThemeToggle />
+            </Link>
+            {/* <ThemeToggle /> */}
             {/* {
               user ? (
                 <UserAccountNav user={user} />
