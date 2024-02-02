@@ -23,18 +23,18 @@ export function Sidebar({ className, navItems }: SidebarProps) {
     });
   }, [activeTabId]);
   return (
-      <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-gray-50 font-semibold sm:bg-background sm:px-6 sm:pb-6">
+      <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] font-semibold sm:px-6 sm:pb-6">
         <a href="" className="items-center justify-center sm:flex text-red-500 font-medium">
           <Image
-            src="https://img.xnewstar.com/file/06a7ca18fed822b469c49.png"
+            src="https://img.xnewstar.com/file/c88520222089a0088bce2.png"
             alt=""
             width={100}
             height={100}
           />
         </a>
         <div>
-          <h1 className="text-xl text-center text-red-500">AI指南针</h1>
-          <h2 className="text-sm text-center text-red-500">通用/垂直人工智能应用导航站</h2>
+          <h1 className="text-lg text-center text-red-500">AI百宝箱 <br/>通用/垂直人工智能应用导航站</h1>
+          {/* <h2 className="text-sm text-center text//-red-500"></h2> */}
         </div>
         <div className="flex-start relative z-40 flex h-auto w-full flex-1 flex-col overflow-y-auto overflow-x-hidden rounded pt-4 opacity-100">
           <div className="flex list-none flex-col md:min-w-full md:flex-col">
@@ -45,7 +45,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                     { navItems.map((category) => {
                       return (
                         <div
-                          className={`block cursor-pointer rounded-lg hover:bg-gray-100 hover:text-purple-500 ${activeTabId === category.id ? "bg-gray-100 text-purple-500" : "text-primary"}`}
+                          className={`block cursor-pointer rounded-lg hover:bg-gray-300 hover:text-purple-500 ${activeTabId === category.id ? "bg-gray-300 text-purple-500" : "text-primary"}`}
                           key={category.id}
                           onClick={() => setActiveTabId(category.id)}
                         >
@@ -53,7 +53,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                             <div className="relative flex shrink-0">
                               <Image
                                 src={category.icon}
-                                alt=""
+                                alt={category.title}
                                 className="block"
                                 width={20}
                                 height={20}

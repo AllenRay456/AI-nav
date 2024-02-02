@@ -34,7 +34,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="zh" suppressHydrationWarning>
         <head >
           <script type="application/ld+json" dangerouslySetInnerHTML={{
             __html: `{
