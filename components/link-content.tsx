@@ -20,7 +20,7 @@ export function LinkItem({ link }: { link: SiteLink }) {
                 : <span className="h-full w-full rounded-full bg-purple-500 text-center font-bold leading-10">{ link.title.slice(0, 1) }</span>
             }
           </div>
-          <h4 className="text-xl font-bold text-primary">{ link.title }</h4>
+          <h3 className="text-xl font-bold text-primary">{ link.title }</h3>
         </Link>
         <div className="mt-2 line-clamp-2 text-sm text-primary">
           { link.description }
@@ -38,7 +38,7 @@ export function LinkContent({ navResources }: { navResources: CategoryWithLinks 
             return (
               <div id={category.id} key={category.id} className="mb-12">
                 <div className="my-4">
-                  <h3 className="mb-2 text-2xl font-bold text-primary/80 sm:text-3xl">{ category.title }</h3>
+                  <h2 className="mb-2 text-2xl font-bold text-primary/80 sm:text-3xl">{ category.title }</h2>
                 </div>
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
                   {
