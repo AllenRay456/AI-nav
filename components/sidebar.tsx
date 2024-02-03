@@ -26,8 +26,8 @@ export function Sidebar({ className, navItems }: SidebarProps) {
       <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] font-semibold sm:px-6 sm:pb-6">
         <a href="" className="items-center justify-center sm:flex text-red-500 font-medium">
           <Image
-            src="https://img.xnewstar.com/file/c88520222089a0088bce2.png"
-            alt=""
+            src="https://img.xnewstar.com/file/eb04c34888c83659e01fb.png"
+            alt="AI百宝箱-通用/垂直人工智能应用导航站"
             width={100}
             height={100}
           />
