@@ -39,6 +39,7 @@ export function LinkContent({ navResources }: { navResources: CategoryWithLinks 
               <div id={category.id} key={category.id} className="mb-12">
                 <div className="my-4">
                   <h2 className="mb-2 text-2xl font-bold text-primary/80 sm:text-3xl">{ category.title }</h2>
+                  <div className="text-sm">{category.description}</div>
                 </div>
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
                   {
