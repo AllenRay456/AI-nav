@@ -67,6 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               `,
             }}
           />
+          <link rel="canonical" href="https://toolbox.xnewstar.com/" />
         </head>
 
         <body
