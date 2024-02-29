@@ -3,9 +3,9 @@ import { Category } from "@prisma/client"
 import { Sidebar } from "./sidebar"
 
 
-interface SidebarProps { 
+interface SidebarProps {
   className?: string;
-  navItems: Pick<Category, "title" | "icon" | "id">[];
+  navItems: Pick<Category, "title" | "icon" | "id" | "key">[];
   setShowMobileSidebar: Function
 }
 

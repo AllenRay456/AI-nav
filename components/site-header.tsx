@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { UserAccountNav } from "./user-account-nav"
 import { SidebarProps } from "./sidebar"
 
-export async function SiteHeader({ navItems }: SidebarProps) {
+export function SiteHeader({ navItems }: SidebarProps) {
   // const user = await getCurrentUser()
   return (
     <header className="sticky top-0 z-40 md:static w-full bg-background dark:border-slate-50/[0.06] lg:border-b lg:border-slate-900/10">
