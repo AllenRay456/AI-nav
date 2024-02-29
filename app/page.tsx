@@ -13,6 +13,7 @@ export default async function IndexPage() {
       title: n.title,
       icon: n.icon,
       id: n.id,
+      key: n.key,
     }
   })
   return <div className="container relative mx-auto min-h-screen w-full px-0">
@@ -21,7 +22,6 @@ export default async function IndexPage() {
          <Sidebar navItems={navItems} />
         </div>
         <div className="sm:pl-[16rem]">
-          {/* @ts-expect-error Async Server Component */}
           <SiteHeader navItems={navItems} />
           <LinkContent navResources={navResources} />
           <SiteFooter />
