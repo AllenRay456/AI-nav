@@ -12,18 +12,27 @@ export interface SidebarProps {
 }
 
 export function Sidebar({ className, navItems }: SidebarProps) {
-  const [activeTabId, setActiveTabId] = useState(navItems[0].id);
+  const [activeTabId, setActiveTabId] = useState(navItems[0].key);
+
   useEffect(() => {
-    const ele = document.getElementById(activeTabId);
-    const elePosition = (ele?.getBoundingClientRect().top || 0);
-    const offsetPosition = elePosition + window.pageYOffset - 75;
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth"
-    });
-  }, [activeTabId]);
+    const hash = window.location.hash;
+    if (hash) {
+      setActiveTabId(hash.replace('#',''));
+    }
+  }, []);
+
+  // useEffect(() => {
+  //   const ele = document.getElementById(activeTabId);
+  //   const elePosition = (ele?.getBoundingClientRect().top || 0);
+  //   const offsetPosition = elePosition + window.pageYOffset - 75;
+  //   window.scrollTo({
+  //     top: offsetPosition,
+  //     behavior: "smooth"
+  //   });
+  // }, [activeTabId]);
+
   return (
-      <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] font-semibold sm:px-6 sm:pb-6">
+      <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] dark:bg-background font-semibold sm:px-6 sm:pb-6">
         <a href="" className="items-center justify-center sm:flex text-red-500 font-medium">
           <Image
             src="https://img.xnewstar.com/file/eb04c34888c83659e01fb.png"
@@ -44,9 +53,9 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                     { navItems.map((category) => {
                       return (
                         <a
-                          className={`block cursor-pointer rounded-lg hover:bg-gray-300 hover:text-purple-500 ${activeTabId === category.id ? "bg-gray-300 text-purple-500" : "text-primary"}`}
+                          className={`block cursor-pointer rounded-lg hover:bg-gray-300 hover:text-purple-500 ${activeTabId === category.key ? "bg-gray-300 text-purple-500" : "text-primary"}`}
                           key={category.id}
-                          // onClick={() => setActiveTabId(category.id)}
+                          onClick={() => setActiveTabId(category.key)}
                           href={`#${category.key}`}
                         >
                           <div className="scale relative mb-2 flex items-center gap-2 rounded-r-lg p-2 transition-colors ease-in-out before:transition-colors hover:no-underline sm:border-l-0 sm:pl-6 sm:before:absolute sm:before:left-[-5px] sm:before:top-[2px] sm:before:h-[calc(100%-4px)] sm:before:w-[10px] sm:before:rounded-full sm:before:transition-colors">
