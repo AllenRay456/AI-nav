@@ -40,8 +40,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
             __html: `{
               "@context" : "https://schema.org",
               "@type" : "WebSite",
-              "name" : "AI指南针",
-              "url" : "https://toolbox.xnewstar.com/"
+              "name" : "OpenAI导航站",
+              "url" : "https://openai.xnewstar.com/"
             }`
           }} />
           {/* 添加 Google Analytics 脚本 */}
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               `,
             }}
           />
-          <link rel="canonical" href="https://toolbox.xnewstar.com/" />
+          <link rel="canonical" href="https://openai.xnewstar.com/" />
         </head>
 
         <body

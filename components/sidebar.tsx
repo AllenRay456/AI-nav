@@ -36,13 +36,13 @@ export function Sidebar({ className, navItems }: SidebarProps) {
         <a href="" className="items-center justify-center sm:flex text-red-500 font-medium">
           <Image
             src="https://img.xnewstar.com/file/eb04c34888c83659e01fb.png"
-            alt="AI百宝箱-通用/垂直人工智能应用导航站"
+            alt="OpenAI导航站-发现最好用的通用和垂直AI工具"
             width={100}
             height={100}
           />
         </a>
         <div>
-          <h1 className="text-lg text-center text-red-500">AI百宝箱 <br/>通用/垂直人工智能应用导航站</h1>
+          <h1 className="text-lg text-center text-red-500">OpenAI导航站 <br/>发现最好用的通用和垂直AI工具</h1>
         </div>
         <div className="flex-start relative z-40 flex h-auto w-full flex-1 flex-col overflow-y-auto overflow-x-hidden rounded pt-4 opacity-100">
           <div className="flex list-none flex-col md:min-w-full md:flex-col">
