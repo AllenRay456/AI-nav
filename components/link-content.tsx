@@ -35,6 +35,8 @@ export function LinkContent({ navResources }: { navResources: CategoryWithLinks 
       <div className="mx-auto w-full px-4 md:px-6">
         {
           navResources.map((category) => {
+            const showMore = category.links.length > 9;
+            const displayedLinks = showMore ? category.links.slice(0, 9) : category.links;
             return (
               <div id={category.key} key={category.id} className="mb-0 md:mb-12 pt-20 md:pt-0">
                 <div className="my-4">
@@ -43,9 +45,22 @@ export function LinkContent({ navResources }: { navResources: CategoryWithLinks 
                 </div>
                 <div className="grid grid-cols-1 gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
                   {
-                    category.links.map((link) => (
+                    displayedLinks.map((link) => (
                       <LinkItem link={link} key={link.id} />
                     ))
+                  }
+                  {
+                    showMore && (
+                      <LinkItem
+                        link={({
+                          id: '',
+                          url: `/${category.key}`, // 根据实际路由调整
+                          title: "更多AI",
+                          description: `查看更多更全的 ${category.title} 应用`,
+                          icon: "", // 如果您有一个特定的图标显示
+                        } as SiteLink)}
+                      />
+                    )
                   }
                 </div>
               </div>
