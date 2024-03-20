@@ -40,7 +40,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
 
   return (
     <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] dark:bg-background font-semibold sm:px-6 sm:pb-6">
-      <a
+      <Link
         href="/"
         className="items-center justify-center sm:flex text-red-500 font-medium"
       >
@@ -50,7 +50,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
           width={100}
           height={100}
         />
-      </a>
+      </Link>
       <div>
         <h1 className="text-lg text-center text-red-500">
           OpenAI导航站 <br />
