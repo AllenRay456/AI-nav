@@ -26,7 +26,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
     } else if (!isHomePage) {
       setActiveTabId(pathname.replace("/", ""))
     }
-  }, [])
+  }, [pathname])
 
   // useEffect(() => {
   //   const ele = document.getElementById(activeTabId);
