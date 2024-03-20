@@ -18,15 +18,18 @@ export function Sidebar({ className, navItems }: SidebarProps) {
 
   const pathname = usePathname()
   const isHomePage = pathname === "/"
+  const hash = window.location.hash
 
   useEffect(() => {
-    const hash = window.location.hash
-    if (hash) {
-      setActiveTabId(hash.replace("#", ""))
-    } else if (!isHomePage) {
-      setActiveTabId(pathname.replace("/", ""))
-    }
-  }, [pathname])
+    // 处理 hash 变化
+    const newHash = hash ? hash.replace("#", "") : null;
+    // 处理 pathname 变化
+    const newPathname = pathname === "/" ? navItems[0].key : pathname.replace("/", "");
+
+    // 如果 URL 中有 hash，则优先使用 hash 更新 activeTabId
+    const newActiveTabId = newHash || newPathname;
+    setActiveTabId(newActiveTabId);
+  }, [hash, pathname, navItems]);
 
   // useEffect(() => {
   //   const ele = document.getElementById(activeTabId);
