@@ -18,28 +18,20 @@ export function Sidebar({ className, navItems }: SidebarProps) {
 
   const pathname = usePathname()
   const isHomePage = pathname === "/"
-  const hash = window.location.hash
 
   useEffect(() => {
-    // 处理 hash 变化
-    const newHash = hash ? hash.replace("#", "") : null;
-    // 处理 pathname 变化
-    const newPathname = pathname === "/" ? navItems[0].key : pathname.replace("/", "");
-
-    // 如果 URL 中有 hash，则优先使用 hash 更新 activeTabId
-    const newActiveTabId = newHash || newPathname;
-    setActiveTabId(newActiveTabId);
-  }, [hash, pathname, navItems]);
-
-  // useEffect(() => {
-  //   const ele = document.getElementById(activeTabId);
-  //   const elePosition = (ele?.getBoundingClientRect().top || 0);
-  //   const offsetPosition = elePosition + window.pageYOffset - 75;
-  //   window.scrollTo({
-  //     top: offsetPosition,
-  //     behavior: "smooth"
-  //   });
-  // }, [activeTabId]);
+    if (pathname === "/") {
+      const hash = window.location.hash
+      if (hash) {
+        setActiveTabId(hash.replace("#", ""))
+      } else {
+        setActiveTabId(navItems[0].key)
+      }
+    } else {
+      const newActiveTabId = pathname.replace("/", "")
+      setActiveTabId(newActiveTabId)
+    }
+  }, [pathname, navItems])
 
   return (
     <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] dark:bg-background font-semibold sm:px-6 sm:pb-6">
