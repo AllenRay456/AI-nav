@@ -1,10 +1,25 @@
 import { LinkItem } from "@/components/link-content"
 import { Sidebar } from "@/components/sidebar"
 import { SiteFooter } from "@/components/site-footer"
+import type { Metadata } from 'next'
 
 import getNavLinks, { getLinksByCategoryKey } from "../links"
 
 export const revalidate = 24 * 60 * 60
+
+export async function generateMetadata(
+  { params }: {
+    params: { category: string }
+  },
+): Promise<Metadata> {
+  const navResources = await getNavLinks()
+  const current = navResources.find(n => n.key === params.category)!
+
+  return {
+    title: `发现最好用的${current.title}工具 - OpenAI 导航站`,
+    description: current.description,
+  }
+}
 
 export default async function CategroyPage({
   params,
@@ -22,6 +37,7 @@ export default async function CategroyPage({
       key: n.key,
     }
   })
+
   return (
     <div className="container relative mx-auto min-h-screen w-full px-0">
       <div className="flex">
