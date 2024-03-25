@@ -17,7 +17,7 @@ export function SiteHeader({ navItems }: SidebarProps) {
         <MainNav items={siteConfig.mainNav} navItems={navItems} />
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="flex items-center space-x-1">
-            <Link
+            {/* <Link
               href={'https://forms.gle/AET8HUe6Y9QPdWvh7'}
               target="_blank"
               rel="noreferrer"
@@ -29,6 +29,19 @@ export function SiteHeader({ navItems }: SidebarProps) {
                 })}
               >
                 <span className="">提交共享AI资源</span>
+              </div>
+            </Link> */}
+            <Link
+              href={'/aiblog'}
+              target="_blank"
+            >
+              <div
+                className={buttonVariants({
+                  size: "sm",
+                  variant: "ghost",
+                })}
+              >
+                <span className="text-red-400">AI工具使用</span>
               </div>
             </Link>
             {/* <ThemeToggle /> */}
