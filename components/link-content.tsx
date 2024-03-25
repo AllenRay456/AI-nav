@@ -6,29 +6,35 @@ import { CategoryWithLinks } from "@/app/links"
 
 export function LinkItem({ link }: { link: SiteLink }) {
   return (
-    <div className="relative mb-6 flex min-h-[122px] min-w-0 flex-col break-words rounded-lg border border-gray-200 p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-lg  xl:mb-0">
-      <Link href={link.url} target="_blank" className="flex items-center">
-        <div className="mr-3 flex size-10 overflow-hidden rounded-full">
-          {link.icon ? (
-            <Image
-              src={link.icon}
-              className="object-fill"
-              alt={link.title}
-              width={40}
-              height={40}
-            />
-          ) : (
-            <span className="size-full rounded-full bg-purple-500 text-center font-bold leading-10">
-              {link.title.slice(0, 1)}
-            </span>
-          )}
+    <Link
+      href={link.key ? `https://blog.xnewstar.com/tool/${link.key}` : link.url}
+      target="_blank"
+      className="flex items-center"
+    >
+      <div className="relative mb-6 flex min-h-[122px] w-full min-w-0 flex-col break-words rounded-lg border border-gray-200 p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-lg  xl:mb-0">
+        <div className="flex items-center">
+          <div className="mr-3 flex size-10 overflow-hidden rounded-full">
+            {link.icon ? (
+              <Image
+                src={link.icon}
+                className="object-fill"
+                alt={link.title}
+                width={40}
+                height={40}
+              />
+            ) : (
+              <span className="size-full rounded-full bg-purple-500 text-center font-bold leading-10">
+                {link.title.slice(0, 1)}
+              </span>
+            )}
+          </div>
+          <h3 className="text-xl font-bold text-primary">{link.title}</h3>
         </div>
-        <h3 className="text-xl font-bold text-primary">{link.title}</h3>
-      </Link>
-      <div className="mt-2 line-clamp-2 text-sm text-primary">
-        {link.description}
+        <div className="mt-2 line-clamp-2 text-sm text-primary">
+          {link.description}
+        </div>
       </div>
-    </div>
+    </Link>
   )
 }
 
@@ -73,7 +79,7 @@ export function LinkContent({
                         </span>
                       </div>
                       <h3 className="text-primary">
-                      {`查看更多${category.title}应用`}
+                        {`查看更多${category.title}应用`}
                       </h3>
                     </Link>
                   </div>
