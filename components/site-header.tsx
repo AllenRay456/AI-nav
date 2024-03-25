@@ -32,7 +32,7 @@ export function SiteHeader({ navItems }: SidebarProps) {
               </div>
             </Link> */}
             <Link
-              href={'/aiblog'}
+              href={'https://blog.xnewstar.com/'}
               target="_blank"
             >
               <div
