@@ -12,7 +12,7 @@ import { SidebarProps } from "./sidebar"
 export function SiteHeader({ navItems }: SidebarProps) {
   // const user = await getCurrentUser()
   return (
-    <header className="sticky top-0 z-40 md:static w-full bg-background dark:border-slate-50/[0.06] lg:border-b lg:border-slate-900/10">
+    <header className="sticky top-0 z-40 w-full bg-background dark:border-slate-50/[0.06] md:static lg:border-b lg:border-slate-900/10">
       <div className="container flex h-16 items-center px-4 sm:justify-between sm:space-x-0">
         <MainNav items={siteConfig.mainNav} navItems={navItems} />
         <div className="flex flex-1 items-center justify-end space-x-4">
@@ -32,7 +32,7 @@ export function SiteHeader({ navItems }: SidebarProps) {
               </div>
             </Link> */}
             <Link
-              href={'https://blog.xnewstar.com/'}
+              href={process.env.NEXT_PUBLIC_BLOG!}
               target="_blank"
             >
               <div
@@ -41,7 +41,7 @@ export function SiteHeader({ navItems }: SidebarProps) {
                   variant: "ghost",
                 })}
               >
-                <span className="text-red-400">AI工具使用</span>
+                <span className="text-red-400">AI工具教程</span>
               </div>
             </Link>
             {/* <ThemeToggle /> */}

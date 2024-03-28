@@ -34,10 +34,10 @@ export function Sidebar({ className, navItems }: SidebarProps) {
   }, [pathname, navItems])
 
   return (
-    <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] dark:bg-background font-semibold sm:px-6 sm:pb-6">
+    <nav className="after:h-[calc(100vh - 65px)] block min-h-screen w-60 flex-row flex-nowrap bg-[#ededf4] font-semibold dark:bg-background sm:px-6 sm:pb-6">
       <Link
         href="/"
-        className="items-center justify-center sm:flex text-red-500 font-medium"
+        className="flex items-center justify-center font-medium text-red-500"
       >
         <Image
           src="https://img.xnewstar.com/file/eb04c34888c83659e01fb.png"
@@ -47,7 +47,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
         />
       </Link>
       <div>
-        <h1 className="text-lg text-center text-red-500">
+        <h1 className="text-center text-lg text-red-500">
           OpenAI导航站 <br />
           发现最好用的AI工具
         </h1>

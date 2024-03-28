@@ -12,18 +12,18 @@ const nextConfig = {
       },
     ],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/tool/:pat',
-        destination: 'https://notion-next-ai-nav.vercel.app/tool/:path*',
-      },
-      {
-        source: '/aiblog',
-        destination: 'https://notion-next-ai-nav.vercel.app/',
-      },
-    ]
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/tool/:pat',
+  //       destination: 'https://notion-next-ai-nav.vercel.app/tool/:path*',
+  //     },
+  //     {
+  //       source: '/aiblog',
+  //       destination: 'https://notion-next-ai-nav.vercel.app/',
+  //     },
+  //   ]
+  // },
 }
 
 export default nextConfig

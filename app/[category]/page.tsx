@@ -2,6 +2,7 @@ import { LinkItem } from "@/components/link-content"
 import { Sidebar } from "@/components/sidebar"
 import { SiteFooter } from "@/components/site-footer"
 import type { Metadata } from 'next'
+import { SiteHeader } from "@/components/site-header"
 
 import getNavLinks, { getLinksByCategoryKey } from "../links"
 
@@ -39,12 +40,13 @@ export default async function CategroyPage({
   })
 
   return (
-    <div className="container relative mx-auto min-h-screen w-full px-0">
+    <div className="container relative mx-auto min-h-screen w-full px-4">
       <div className="flex">
-        <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block ">
+        <div className="fixed z-20 hidden min-h-screen w-64 transition-all duration-300 ease-in-out sm:block ">
           <Sidebar navItems={navItems} />
         </div>
-        <div className="sm:pl-[16rem]">
+        <div className="sm:pl-64">
+          <SiteHeader navItems={navItems} />
           <div className="my-8">
             <h2 className="mb-2 text-2xl font-bold text-primary/80 sm:text-3xl">
               {current.title}

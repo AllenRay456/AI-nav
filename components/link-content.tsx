@@ -7,7 +7,7 @@ import { CategoryWithLinks } from "@/app/links"
 export function LinkItem({ link }: { link: SiteLink }) {
   return (
     <Link
-      href={link.key ? `https://blog.xnewstar.com/tool/${link.key}` : link.url}
+      href={link.key ? `${process.env.NEXT_PUBLIC_BLOG}/tool/${link.key}` : link.url}
       target="_blank"
       className="flex items-center"
     >
