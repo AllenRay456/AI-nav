@@ -2,85 +2,103 @@
 
 <url>
   <loc>https://openai.xnewstar.com/</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIBots</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIImage</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://openai.xnewstar.com/AILife</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AISearch</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
    <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIVideo</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIVoice</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
-  <priority>0.64</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIDevtools</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIExtends</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIOpenSource</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://openai.xnewstar.com/AILife</loc>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AINews</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AISite</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://openai.xnewstar.com/AILearn</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <loc>https://openai.xnewstar.com/AIEducation</loc>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://openai.xnewstar.com/AIGPTs</loc>
-  <lastmod>2024-03-19T03:08:51+00:00</lastmod>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://openai.xnewstar.com/AIGPTs</loc>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://openai.xnewstar.com/AIProfessor</loc>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://openai.xnewstar.com/AIComputingPower</loc>
+  <lastmod>2024-03-27T03:08:51+00:00</lastmod>
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
