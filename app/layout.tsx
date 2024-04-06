@@ -40,7 +40,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             __html: `{
               "@context" : "https://schema.org",
               "@type" : "WebSite",
-              "name" : "OpenAI导航站",
+              "name" : "AI导航站",
               "url" : "https://openai.xnewstar.com/"
             }`
           }} />

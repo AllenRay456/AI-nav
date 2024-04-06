@@ -41,15 +41,15 @@ export function Sidebar({ className, navItems }: SidebarProps) {
       >
         <Image
           src="https://img.xnewstar.com/file/eb04c34888c83659e01fb.png"
-          alt="OpenAI导航站-发现最好用的通用和垂直AI工具"
+          alt="AI导航站-发现最好用的通用和垂直AI工具"
           width={100}
           height={100}
         />
       </Link>
       <div>
         <h1 className="text-center text-lg text-red-500">
-          OpenAI导航站 <br />
-          发现最好用的AI工具
+          AI导航站 <br />
+          发现好用免费的AI工具
         </h1>
       </div>
       <div className="flex-start relative z-40 flex h-auto w-full flex-1 flex-col overflow-y-auto overflow-x-hidden rounded pt-4 opacity-100">
