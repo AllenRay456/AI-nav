@@ -11,3 +11,21 @@ export const siteConfig = {
     },
   ],
 }
+
+export const categoryMap = [
+  { cid: "clidwn4ok0004yvrsk3anm2vj", title: "AI助手" },
+  { cid: "uzso1s428wkjs05z7z6txwmk", title: "AI搜索" },
+  { cid: "xi9a5rcmx6kc3u6ugzo6zt5x", title: "AI图像" },
+  { cid: "tvy5ugm1r8qbigjhymrb2h6o", title: "AI视频" },
+  { cid: "t0b4w3r0yqs2cu1sm1es2pqj", title: "AI语音" },
+  { cid: "ej7vinm342oib2nu4bq8vy0e", title: "AI DevTools" },
+  { cid: "n15ayjarzxpwxkyltdgx3p8n", title: "AI插件" },
+  { cid: "l9oh70xx5h2pidfkozqymrj0", title: "AI开源" },
+  { cid: "clidx4sez000ayvrs3b971yrv", title: "AI资讯" },
+  { cid: "fohpsenqkgcfmib7fn4i82h9", title: "AI生活" },
+  { cid: "a0ndp9v7xiy6b7nawcebi4od", title: "AI建站" },
+  { cid: "j28auaowxkci8tnw1fhsex5e", title: "AI教育" },
+  { cid: "clidwlud00002yvrsle9m5f97", title: "AI GPTS" },
+  { cid: "qlziyoeqay4vjsbzdgnd2bpo", title: "AI专家" },
+  { cid: "khokseq7umwq85tzsp7gzi2m", title: "AI算力" },
+]
