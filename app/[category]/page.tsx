@@ -56,7 +56,6 @@ export default async function CategroyPage({
           <Sidebar navItems={navItems} />
         </div>
         <div className="sm:pl-64">
-          {/* @ts-expect-error Async Server Component */}
           <SiteHeader navItems={navItems} />
           <div className="my-8">
             <h2 className="mb-2 text-2xl font-bold text-primary/80 sm:text-3xl">
