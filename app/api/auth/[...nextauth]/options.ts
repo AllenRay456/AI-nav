@@ -53,6 +53,9 @@ const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
+  pages: {
+    signIn: '/login', // 自定义登录页面
+  },
   debug: process.env.NODE_ENV !== "production",
 };
 
