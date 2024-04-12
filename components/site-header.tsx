@@ -1,16 +1,16 @@
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
+import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { cn } from "@/lib/utils"
-// import { getCurrentUser } from "@/lib/session"
-import { UserAccountNav } from "./user-account-nav"
 import { SidebarProps } from "./sidebar"
+import { getCurrentUser } from "@/lib/session"
+import { UserAccountNav } from "./user-account-nav"
 
-export function SiteHeader({ navItems }: SidebarProps) {
-  // const user = await getCurrentUser()
+export async function SiteHeader({ navItems }: SidebarProps) {
+  const user = await getCurrentUser()
   return (
     <header className="sticky top-0 z-40 w-full bg-background dark:border-slate-50/[0.06] md:static lg:border-b lg:border-slate-900/10">
       <div className="container flex h-16 items-center px-4 sm:justify-between sm:space-x-0">
@@ -31,35 +31,18 @@ export function SiteHeader({ navItems }: SidebarProps) {
                 <span className="">提交共享AI资源</span>
               </div>
             </Link> */}
-            <Link
-              href={process.env.NEXT_PUBLIC_BLOG!}
-              target="_blank"
-            >
+            <Link href={process.env.NEXT_PUBLIC_BLOG!} target="_blank">
               <div
                 className={buttonVariants({
                   size: "sm",
                   variant: "ghost",
                 })}
               >
-                <span className="text-red-400">AI工具教程</span>
+                <span className="text-red-400">AI导航博客</span>
               </div>
             </Link>
             {/* <ThemeToggle /> */}
-            {/* {
-              user ? (
-                <UserAccountNav user={user} />
-              ) : (
-                <Link
-                  href="/login"
-                  className={cn(
-                    buttonVariants({ variant: "secondary", size: "sm" }),
-                    "px-4"
-                  )}
-                >
-                  Login
-                </Link>
-              )
-            } */}
+            {user && <UserAccountNav user={user} />}
           </nav>
         </div>
       </div>

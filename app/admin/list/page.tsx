@@ -75,8 +75,7 @@ export default function IndexPage() {
     })
     if (res.status === 200) {
       toast({
-        title: "Sign up Success",
-        description: "ccount created! Redirecting to homepage...",
+        title: "获取列表成功",
       })
       const list = await res.json()
       setList(list)
@@ -139,7 +138,7 @@ export default function IndexPage() {
                   </FormControl>
                   <SelectContent>
                     {categoryMap.map((category) => (
-                      <SelectItem value={category.cid}>
+                      <SelectItem key={category.cid} value={category.cid}>
                         {category.title}
                       </SelectItem>
                     ))}
@@ -160,18 +159,23 @@ export default function IndexPage() {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead className="w-[100px]">ID</TableHead>
+              <TableHead>ID</TableHead>
               <TableHead>Title</TableHead>
               <TableHead>Url</TableHead>
-              <TableHead className="text-right">category</TableHead>
+              <TableHead>category</TableHead>
+              <TableHead>管理</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {list.map((link) => (
               <TableRow key={link.id}>
+                <TableCell className="font-medium">{link.id}</TableCell>
                 <TableCell className="font-medium">{link.title}</TableCell>
                 <TableCell>{link.url}</TableCell>
                 <TableCell>{link.cid}</TableCell>
+                <TableCell className="w-20">
+                  <Link href={`/admin/creat?id=${link.id}`}>编辑</Link>
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

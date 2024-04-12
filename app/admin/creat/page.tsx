@@ -1,8 +1,8 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { useRouter, useSearchParams } from "next/navigation"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { Link as SiteLink } from "@prisma/client"
 import { useForm } from "react-hook-form"
@@ -53,8 +53,41 @@ const FormSchema = z
 
 export default function IndexPage() {
   const router = useRouter()
-  const [list, setList] = useState([] as SiteLink[])
+  const searchParams = useSearchParams()
+  const linkId = searchParams.get("id")
 
+  useEffect(() => {
+    if (linkId) {
+      fetch(`/api/admin/getDetail`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: linkId }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          // form.reset(data) // Use the fetched data to set form values
+          form.setValue("cid", data.cid)
+          form.setValue("description", data.description || "")
+          form.setValue("title", data.title || "")
+          form.setValue("url", data.url || "")
+          form.setValue("icon", data.icon || "")
+          form.setValue("key", data.key || "")
+          form.setValue("rank", data.rank || 100)
+          form.setValue("status", data.status || 1)
+        })
+        .catch((error) => {
+          console.error("Failed to fetch link:", error)
+          toast({
+            title: "加载错误",
+            description: "无法加载链接数据",
+            variant: "destructive",
+          })
+        })
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [linkId])
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -69,17 +102,25 @@ export default function IndexPage() {
     },
   })
 
-  async function creat(data?: z.infer<typeof FormSchema>) {
-    const res = await fetch("/api/admin/creat", {
+  async function creatOrUpdate(data?: z.infer<typeof FormSchema>) {
+    if(!data){
+      return
+    }
+    const endpoint = linkId ? `/api/admin/update` : "/api/admin/creat"
+    const { title, key, icon, description, url, status, rank, cid } = data
+    const req = linkId
+      ? { id: linkId, title, key, icon, description, url, status, rank, cid }
+      : data
+    const res = await fetch(endpoint, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data ? data : {}),
+      body: JSON.stringify(req),
     })
     if (res.status === 200) {
       toast({
-        title: "创建成功",
+        title: "操作成功",
         description: "返回列表页",
       })
       router.push("/admin/list")
@@ -94,7 +135,7 @@ export default function IndexPage() {
   }
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    creat(data)
+    creatOrUpdate(data)
   }
 
   return (
@@ -136,6 +177,7 @@ export default function IndexPage() {
                 <Select
                   onValueChange={field.onChange}
                   defaultValue={field.value}
+                  value={field.value}
                 >
                   <FormControl className="min-w-0">
                     <SelectTrigger>
@@ -155,20 +197,6 @@ export default function IndexPage() {
               </FormItem>
             )}
           />
-          {/* <FormField
-            key="id"
-            control={form.control}
-            name="id"
-            render={({ field }) => (
-              <FormItem className="flex items-center justify-start gap-2 space-y-0">
-                <FormLabel className="w-20 shrink-0">ID</FormLabel>
-                <FormControl>
-                  <Input className="shrink-0" placeholder="id" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          /> */}
           <FormField
             key="url"
             control={form.control}

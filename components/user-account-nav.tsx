@@ -1,8 +1,8 @@
 "use client"
 
+import Link from "next/link"
 import { User } from "next-auth"
 import { signOut } from "next-auth/react"
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -22,7 +22,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
       <DropdownMenuTrigger>
         <UserAvatar
           user={{ name: user.name || null, image: user.image || null }}
-          className="h-8 w-8"
+          className="size-8"
         />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -37,12 +37,15 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
           </div>
         </div>
         <DropdownMenuSeparator />
+        <DropdownMenuItem>
+          <Link href="/admin/list">管理</Link>
+        </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer"
           onSelect={(event: any) => {
             event.preventDefault()
             signOut({
-              callbackUrl: `${window.location.origin}/login`,
+              callbackUrl: `${window.location.origin}`,
             })
           }}
         >
