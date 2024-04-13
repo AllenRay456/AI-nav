@@ -1,4 +1,5 @@
 User-Agent: *
 Allow: /
+Disallow: /admin/
 
 Sitemap: https://openai.xnewstar.com/sitemap.xml
