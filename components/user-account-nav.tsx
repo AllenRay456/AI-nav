@@ -38,7 +38,7 @@ export function UserAccountNav({ user }: UserAccountNavProps) {
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem>
-          <Link href="/admin/list">管理</Link>
+          <Link className="w-full" href="/admin/list">管理</Link>
         </DropdownMenuItem>
         <DropdownMenuItem
           className="cursor-pointer"

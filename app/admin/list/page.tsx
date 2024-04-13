@@ -8,6 +8,7 @@ import { Link as SiteLink } from "@prisma/client"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 
+import { categoryMap } from "@/config/site"
 import { Button } from "@/components/ui/button"
 import {
   Form,
@@ -34,7 +35,6 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { toast } from "@/components/ui/use-toast"
-import {categoryMap} from '@/config/site'
 
 const FormSchema = z.object({
   title: z.string(),
@@ -50,18 +50,11 @@ export default function IndexPage() {
   const router = useRouter()
   const [list, setList] = useState([] as SiteLink[])
 
-  useEffect(() => {
-    const fetchData = async () => {
-      await fetchList()
-    }
-    fetchData()
-  }, [])
-
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
       title: "",
-      cid: undefined,
+      cid: categoryMap[2].cid,
     },
   })
 
@@ -89,18 +82,29 @@ export default function IndexPage() {
     }
   }
 
+  useEffect(() => {
+    const fetchData = async () => {
+      await fetchList(form.getValues())
+    }
+    fetchData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   function onSubmit(data: z.infer<typeof FormSchema>) {
     fetchList(data)
   }
 
   return (
     <div className="container relative mx-auto flex min-h-screen w-full flex-col gap-8 px-8">
-      <div className="flex gap-4 pt-20">
-        <Link href="/" className="border border-red-300 p-1">
+      <div className="mt-20 flex gap-4">
+        <Link href="/" className="border bg-gray-300 p-1">
           返回主页
         </Link>
-        <Link href="/admin/list" className="border border-red-300 p-1">
+        <Link href="/admin/list" className="border bg-gray-300 p-1">
           返回列表管理页
+        </Link>
+        <Link href="/admin/creat" className="border bg-gray-300 p-1">
+          新建AI工具
         </Link>
       </div>
       <Form {...form}>
@@ -115,7 +119,7 @@ export default function IndexPage() {
               <FormItem className="flex items-center gap-2 space-y-0">
                 <FormLabel>Title</FormLabel>
                 <FormControl>
-                  <Input placeholder="shadcn" {...field} />
+                  <Input placeholder="" {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -152,12 +156,10 @@ export default function IndexPage() {
           <Button type="submit">Submit</Button>
         </form>
       </Form>
-      <Link href='/admin/creat'>
-        <Button className="self-start">新建AI工具</Button>
-      </Link>
-      <div className="p-4">
+
+      <div>
         <Table>
-          <TableHeader>
+          <TableHeader className="bg-gray-200">
             <TableRow>
               <TableHead>ID</TableHead>
               <TableHead>Title</TableHead>

@@ -103,7 +103,7 @@ export default function IndexPage() {
   })
 
   async function creatOrUpdate(data?: z.infer<typeof FormSchema>) {
-    if(!data){
+    if (!data) {
       return
     }
     const endpoint = linkId ? `/api/admin/update` : "/api/admin/creat"
@@ -141,10 +141,10 @@ export default function IndexPage() {
   return (
     <div className="container relative mx-auto flex min-h-screen w-full flex-col gap-8 px-8">
       <div className="flex gap-4 pt-20">
-        <Link href="/" className="border border-red-300 p-1">
+        <Link href="/" className="border bg-gray-300 p-1">
           返回主页
         </Link>
-        <Link href="/admin/list" className="border border-red-300 p-1">
+        <Link href="/admin/list" className="border bg-gray-300 p-1">
           返回列表管理页
         </Link>
       </div>
