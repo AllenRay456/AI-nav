@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
+  metadataBase: new URL('https://openai.xnewstar.com'),
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     // { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -23,14 +24,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
-    // url: s'https://nextjs.org',
+    url: 'https://openai.xnewstar.com',
     siteName: siteConfig.shortName,
     images: [
       {
-        url: '/favicon.ico',
-        width: 256,
-        height: 256,
-        alt: siteConfig.shortName,
+        url: 'https://img.xnewstar.com/file/8f237165e46090d92ad26.png',
+        width: 2536,
+        height: 1822,
+        alt: siteConfig.name,
       },
     ],
     type: 'website',
