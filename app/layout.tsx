@@ -67,7 +67,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
               `,
             }}
           />
-          <link rel="canonical" href="https://openai.xnewstar.com/" />
         </head>
 
         <body
