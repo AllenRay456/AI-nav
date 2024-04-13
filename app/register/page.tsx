@@ -1,10 +1,14 @@
-import { Icons } from "@/components/icons";
-import { buttonVariants } from "@/components/ui/button";
-import { UserAuthForm } from "@/components/user-auth-form";
-import { cn } from "@/lib/utils";
-import Link from "next/link";
+import Link from "next/link"
+
+import { cn } from "@/lib/utils"
+import { buttonVariants } from "@/components/ui/button"
+import { Icons } from "@/components/icons"
+import { UserAuthForm } from "@/components/user-auth-form"
 
 export default function RegisterPage() {
+  if (true) {
+    return null
+  }
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
       <Link
@@ -37,10 +41,10 @@ export default function RegisterPage() {
             className="hover:text-brand font-semibold text-gray-800 underline underline-offset-4"
           >
             Sign in
-          </Link>
-          {" "}instead.
+          </Link>{" "}
+          instead.
         </p>
       </div>
     </div>
-  );
+  )
 }
