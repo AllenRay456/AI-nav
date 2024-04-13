@@ -27,7 +27,7 @@ export async function generateMetadata(
   const current = navResources.find(n => n.key === params.category)!
 
   return {
-    title: `发现最好用的${current.title}工具 - OpenAI 导航站`,
+    title: `发现最好用的${current.title}工具`,
     description: current.description,
   }
 }
