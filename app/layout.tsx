@@ -20,6 +20,21 @@ export const metadata: Metadata = {
     { media: "(prefers-color-scheme: light)", color: "white" },
     // { media: "(prefers-color-scheme: dark)", color: "black" },
   ],
+  openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    // url: s'https://nextjs.org',
+    siteName: siteConfig.shortName,
+    images: [
+      {
+        url: '/favicon.ico',
+        width: 256,
+        height: 256,
+        alt: siteConfig.shortName,
+      },
+    ],
+    type: 'website',
+  },
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon-16x16.png",
