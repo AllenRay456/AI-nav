@@ -3,7 +3,7 @@ import { Sidebar } from "@/components/sidebar"
 import { SiteFooter } from "@/components/site-footer"
 import type { Metadata } from 'next'
 import { SiteHeader } from "@/components/site-header"
-
+import { siteConfig } from "@/config/site"
 import getNavLinks, { getLinksByCategoryKey } from "../links"
 
 export const revalidate = 24 * 60 * 60
@@ -29,6 +29,21 @@ export async function generateMetadata(
   return {
     title: `发现最好用的${current.title}工具`,
     description: current.description,
+    openGraph: {
+      title: `发现最好用的${current.title}工具 | ${siteConfig.shortName}`,
+      description: current.description,
+      url: params.category,
+      siteName: siteConfig.shortName,
+      images: [
+        {
+          url: 'https://img.xnewstar.com/file/8f237165e46090d92ad26.png',
+          width: 2536,
+          height: 1822,
+          alt: current.description,
+        },
+      ],
+      type: 'website',
+    },
   }
 }
 
