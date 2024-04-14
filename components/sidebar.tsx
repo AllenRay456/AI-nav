@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { Category } from "@prisma/client"
+import { siteConfig } from "@/config/site"
 
 import { cn } from "@/lib/utils"
 
@@ -38,17 +39,18 @@ export function Sidebar({ className, navItems }: SidebarProps) {
       <Link
         href="/"
         className="flex items-center justify-center font-medium text-red-500"
+        title={siteConfig.name}
       >
         <Image
           src="https://img.xnewstar.com/file/eb04c34888c83659e01fb.png"
-          alt="AI导航站-发现最好用的通用和垂直AI工具"
+          alt={siteConfig.name}
           width={100}
           height={100}
         />
       </Link>
       <div>
         <h1 className="text-center text-lg text-red-500">
-          AI导航站 <br />
+          {siteConfig.name} <br />
           发现好用免费的AI工具
         </h1>
       </div>
@@ -71,6 +73,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                         }`}
                         key={category.id}
                         onClick={() => setActiveTabId(category.key)}
+                        title={category.title}
                       >
                         <div className="scale relative mb-2 flex items-center gap-2 rounded-r-lg p-2 transition-colors ease-in-out before:transition-colors hover:no-underline sm:border-l-0 sm:pl-6 sm:before:absolute sm:before:left-[-5px] sm:before:top-[2px] sm:before:h-[calc(100%-4px)] sm:before:w-[10px] sm:before:rounded-full sm:before:transition-colors">
                           <div className="relative flex shrink-0">

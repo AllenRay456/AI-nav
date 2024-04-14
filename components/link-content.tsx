@@ -10,6 +10,7 @@ export function LinkItem({ link }: { link: SiteLink }) {
       href={link.key ? `${process.env.NEXT_PUBLIC_BLOG}/tool/${link.key}` : link.url}
       target="_blank"
       className="flex items-center"
+      title={link.title}
     >
       <div className="relative mb-6 flex min-h-[122px] w-full min-w-0 flex-col break-words rounded-lg border border-gray-200 p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-lg  xl:mb-0">
         <div className="flex items-center">
@@ -30,7 +31,7 @@ export function LinkItem({ link }: { link: SiteLink }) {
           </div>
           <h3 className="text-xl font-bold text-primary">{link.title}</h3>
         </div>
-        <div className="mt-2 line-clamp-2 text-sm text-primary">
+        <div className="mt-2 line-clamp-2 text-sm text-primary" title={link.description}>
           {link.description}
         </div>
       </div>
