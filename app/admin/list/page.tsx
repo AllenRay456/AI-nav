@@ -54,7 +54,7 @@ export default function IndexPage() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       title: "",
-      cid: categoryMap[2].cid,
+      cid: categoryMap[1].cid,
     },
   })
 
@@ -87,7 +87,7 @@ export default function IndexPage() {
       await fetchList(form.getValues())
     }
     fetchData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
@@ -99,9 +99,6 @@ export default function IndexPage() {
       <div className="mt-20 flex gap-4">
         <Link href="/" className="border bg-gray-300 p-1">
           返回主页
-        </Link>
-        <Link href="/admin/list" className="border bg-gray-300 p-1">
-          返回列表管理页
         </Link>
         <Link href="/admin/creat" className="border bg-gray-300 p-1">
           新建AI工具
@@ -161,8 +158,10 @@ export default function IndexPage() {
         <Table>
           <TableHeader className="bg-gray-200">
             <TableRow>
-              <TableHead>ID</TableHead>
+              <TableHead className="">ID</TableHead>
               <TableHead>Title</TableHead>
+              <TableHead>Key</TableHead>
+              <TableHead>Rank</TableHead>
               <TableHead>Url</TableHead>
               <TableHead>category</TableHead>
               <TableHead>管理</TableHead>
@@ -171,10 +170,14 @@ export default function IndexPage() {
           <TableBody>
             {list.map((link) => (
               <TableRow key={link.id}>
-                <TableCell className="font-medium">{link.id}</TableCell>
+                <TableCell>{link.id}</TableCell>
                 <TableCell className="font-medium">{link.title}</TableCell>
+                <TableCell>{link.key || '-'}</TableCell>
+                <TableCell>{link.rank}</TableCell>
                 <TableCell>{link.url}</TableCell>
-                <TableCell>{link.cid}</TableCell>
+                <TableCell>
+                  {categoryMap.find((i) => link.cid === i.cid)?.title}
+                </TableCell>
                 <TableCell className="w-20">
                   <Link href={`/admin/creat?id=${link.id}`}>编辑</Link>
                 </TableCell>
