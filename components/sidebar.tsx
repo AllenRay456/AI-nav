@@ -50,7 +50,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
       </Link>
       <div>
         <h1 className="text-center text-lg text-red-500">
-          {siteConfig.name} <br />
+          {siteConfig.shortName} <br />
           发现好用免费的AI工具
         </h1>
       </div>
@@ -85,7 +85,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
                               height={20}
                             />
                           </div>
-                          <span className="overflow-hidden text-ellipsis whitespace-nowrap">
+                          <span className="truncate">
                             {category.title}
                           </span>
                         </div>
