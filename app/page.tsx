@@ -6,6 +6,7 @@ import { LinkContent } from "@/components/link-content"
 
 // https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
 export const revalidate = 43200
+export const dynamic = 'force-static'
 
 export default async function IndexPage() {
   const navResources = await getNavLinks();
