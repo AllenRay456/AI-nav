@@ -4,7 +4,8 @@ import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { LinkContent } from "@/components/link-content"
 
-export const revalidate = 24 * 60 * 60;
+// https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#revalidate
+export const revalidate = 43200
 
 export default async function IndexPage() {
   const navResources = await getNavLinks();
