@@ -6,7 +6,8 @@ import { SiteHeader } from "@/components/site-header"
 import { siteConfig } from "@/config/site"
 import getNavLinks, { getLinksByCategoryKey } from "../links"
 
-export const revalidate = 24 * 60 * 60
+export const revalidate = 43200
+export const dynamic = 'force-static'
 
 export async function generateStaticParams() {
   const navResources = await getNavLinks()
