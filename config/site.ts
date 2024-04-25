@@ -21,6 +21,7 @@ export const categoryMap = [
   { cid: "t0b4w3r0yqs2cu1sm1es2pqj", title: "AI语音" },
   { cid: "ej7vinm342oib2nu4bq8vy0e", title: "AI DevTools" },
   { cid: "n15ayjarzxpwxkyltdgx3p8n", title: "AI插件" },
+  { cid: "yjw8avczobddapjpu1e1ropr", title: "AI客户端" },
   { cid: "l9oh70xx5h2pidfkozqymrj0", title: "AI开源" },
   { cid: "clidx4sez000ayvrs3b971yrv", title: "AI资讯" },
   { cid: "fohpsenqkgcfmib7fn4i82h9", title: "AI生活" },
