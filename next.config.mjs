@@ -11,9 +11,6 @@ const nextConfig = {
         hostname: "**",
       },
     ],
-  },
-  experimental: {
-    appDir: true,
   }
   // async rewrites() {
   //   return [
