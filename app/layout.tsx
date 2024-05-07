@@ -1,5 +1,6 @@
 import "@/styles/globals.css"
 import { Metadata } from "next"
+import type { Viewport } from 'next'
 import { Analytics } from '@vercel/analytics/react';
 import { siteConfig } from "@/config/site"
 import { fontSans } from "@/lib/fonts"
@@ -17,10 +18,6 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: siteConfig.keywords,
   metadataBase: new URL('https://openai.xnewstar.com'),
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "white" },
-    // { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,
@@ -41,6 +38,13 @@ export const metadata: Metadata = {
     shortcut: "/favicon-16x16.png",
     apple: "/apple-touch-icon.png",
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
 }
 
 interface RootLayoutProps {
