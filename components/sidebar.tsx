@@ -57,7 +57,7 @@ export function Sidebar({ className, navItems }: SidebarProps) {
         {navItems.map((category) => {
           return (
             <Link
-              href={isHomePage ? `#${category.key}` : `/${category.key}`}
+              href={isHomePage ? `#${category.key}` : `/category/${category.key}`}
               className={`block cursor-pointer rounded-lg hover:bg-gray-300 hover:text-purple-500 ${
                 activeTabId === category.key
                   ? "bg-gray-300 text-purple-500"

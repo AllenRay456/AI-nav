@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/site-footer"
 import type { Metadata } from 'next'
 import { SiteHeader } from "@/components/site-header"
 import { siteConfig } from "@/config/site"
-import getNavLinks, { getLinksByCategoryKey } from "../links"
+import getNavLinks, { getLinksByCategoryKey } from "../../links"
 
 export const revalidate = 43200
 export const dynamic = 'force-static'

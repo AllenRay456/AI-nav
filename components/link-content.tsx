@@ -71,7 +71,7 @@ export function LinkContent({
                 {showMore && (
                   <div className="relative mb-6 flex min-w-0 flex-col break-words rounded-lg border border-gray-200 p-4 shadow-md transition-all hover:-translate-y-1 hover:scale-105 hover:bg-border hover:shadow-lg  xl:mb-0">
                     <Link
-                      href={`/${category.key}`}
+                      href={`/category/${category.key}`}
                       className="flex items-center"
                     >
                       <div className="mr-3 flex size-10 overflow-hidden rounded-full">
