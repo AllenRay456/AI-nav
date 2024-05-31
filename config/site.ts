@@ -30,4 +30,5 @@ export const categoryMap = [
   { cid: "clidwlud00002yvrsle9m5f97", title: "AI GPTS" },
   { cid: "qlziyoeqay4vjsbzdgnd2bpo", title: "AI专家" },
   { cid: "khokseq7umwq85tzsp7gzi2m", title: "AI算力" },
+  { cid: "clwuedekn00007anpntef7b6y", title: "AI Agent" },
 ]

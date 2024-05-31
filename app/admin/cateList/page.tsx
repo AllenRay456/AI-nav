@@ -58,13 +58,13 @@ export default function IndexPage() {
     },
   })
 
-  async function fetchList(data?: z.infer<typeof FormSchema>) {
-    const res = await fetch("/api/admin/getList", {
+  async function fetchList() {
+    const res = await fetch("/api/admin/getCateList", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(data ? data : {}),
+      // body: JSON.stringify(data ? data : {}),
     })
     if (res.status === 200) {
       toast({
@@ -84,68 +84,18 @@ export default function IndexPage() {
 
   useEffect(() => {
     const fetchData = async () => {
-      await fetchList(form.getValues())
+      await fetchList()
     }
     fetchData()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  function onSubmit(data: z.infer<typeof FormSchema>) {
-      fetchList(data)
+  function onSubmit() {
+    fetchList()
   }
 
   return (
     <div className="container relative mx-auto flex min-h-screen w-full flex-col gap-8 p-8">
-
-      <Form {...form}>
-        <form
-          onSubmit={form.handleSubmit(onSubmit)}
-          className="flex flex-wrap items-center gap-4"
-        >
-          <FormField
-            control={form.control}
-            name="title"
-            render={({ field }) => (
-              <FormItem className="flex items-center gap-2 space-y-0">
-                <FormLabel>Title</FormLabel>
-                <FormControl>
-                  <Input placeholder="" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="cid"
-            render={({ field }) => (
-              <FormItem className="flex shrink-0 items-center gap-2 space-y-0">
-                <FormLabel className="shrink-0">分类</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                >
-                  <FormControl className="min-w-0">
-                    <SelectTrigger>
-                      <SelectValue placeholder="搜索分类" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {categoryMap.map((category) => (
-                      <SelectItem key={category.cid} value={category.cid}>
-                        {category.title}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <Button type="submit">Submit</Button>
-        </form>
-      </Form>
 
       <div>
         <Table>
@@ -155,8 +105,6 @@ export default function IndexPage() {
               <TableHead>Title</TableHead>
               <TableHead>Key</TableHead>
               <TableHead>Rank</TableHead>
-              <TableHead>Url</TableHead>
-              <TableHead>category</TableHead>
               <TableHead>管理</TableHead>
             </TableRow>
           </TableHeader>
@@ -167,12 +115,8 @@ export default function IndexPage() {
                 <TableCell className="font-medium">{link.title}</TableCell>
                 <TableCell>{link.key || '-'}</TableCell>
                 <TableCell>{link.rank}</TableCell>
-                <TableCell>{link.url}</TableCell>
-                <TableCell>
-                  {categoryMap.find((i) => link.cid === i.cid)?.title}
-                </TableCell>
                 <TableCell className="w-20">
-                  <Link href={`/admin/creat?id=${link.id}`}>编辑</Link>
+                  <Link href={`/admin/cateCreat?id=${link.id}`}>编辑</Link>
                 </TableCell>
               </TableRow>
             ))}

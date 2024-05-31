@@ -33,22 +33,12 @@ const FormSchema = z
     // ID 字段通常在创建新记录时由数据库自动生成，所以在表单提交时可能不需要。
     // id: z.string().optional(),
     icon: z.string(),
-    url: z.string().url(), // 可以使用 zod 的 URL 验证确保 URL 格式正确
     title: z.string().min(1),
     description: z.string(),
     // key 是可选字段，根据你的 Prisma 模型
     key: z.string().optional(),
-    // rank 是可选字段，并且是一个数字，所以我们使用 nullable 并提供一个默认值
-    // public 字段在模型中默认为 true，所以它可能在表单提交时是可选的
-    public: z.boolean().optional(),
-    status: z.coerce.number(),
     rank: z.coerce.number().optional(),
-    cid: z.string(),
     // 因为创建时间和更新时间通常是由数据库自动处理的，所以在表单架构中不需要它们
-  })
-  .refine((data) => data.cid !== null, {
-    // 确保 cid 不为 null
-    message: "分类 ID 不能为空",
   })
 
 export default function IndexPage() {
@@ -58,7 +48,7 @@ export default function IndexPage() {
 
   useEffect(() => {
     if (linkId) {
-      fetch(`/api/admin/getDetail`, {
+      fetch(`/api/admin/getCateDetail`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -68,14 +58,14 @@ export default function IndexPage() {
         .then((res) => res.json())
         .then((data) => {
           // form.reset(data) // Use the fetched data to set form values
-          form.setValue("cid", data.cid)
+          // form.setValue("cid", data.cid)
           form.setValue("description", data.description || "")
           form.setValue("title", data.title || "")
-          form.setValue("url", data.url || "")
+          // form.setValue("url", data.url || "")
           form.setValue("icon", data.icon || "")
           form.setValue("key", data.key || "")
           form.setValue("rank", data.rank || 100)
-          form.setValue("status", data.status || 1)
+          // form.setValue("status", data.status || 1)
         })
         .catch((error) => {
           console.error("Failed to fetch link:", error)
@@ -95,10 +85,10 @@ export default function IndexPage() {
       key: "",
       description: "",
       icon: "",
-      url: "",
-      status: 1,
+      // url: "",
+      // status: 1,
       rank: 100,
-      cid: categoryMap[0].cid,
+      // cid: categoryMap[0].cid,
     },
   })
 
@@ -106,10 +96,10 @@ export default function IndexPage() {
     if (!data) {
       return
     }
-    const endpoint = linkId ? `/api/admin/update` : "/api/admin/creat"
-    const { title, key, icon, description, url, status, rank, cid } = data
+    const endpoint = linkId ? `/api/admin/cateUpdate` : "/api/admin/cateCreat"
+    const { title, key, icon, description, rank } = data
     const req = linkId
-      ? { id: linkId, title, key, icon, description, url, status, rank, cid }
+      ? { id: linkId, title, key, icon, description, rank}
       : data
     const res = await fetch(endpoint, {
       method: "POST",
@@ -123,7 +113,7 @@ export default function IndexPage() {
         title: "操作成功",
         description: "返回列表页",
       })
-      router.push("/admin/list")
+      router.push("/admin/cateList")
     } else {
       const { error } = await res.json()
       toast({
@@ -140,7 +130,6 @@ export default function IndexPage() {
 
   return (
     <div className="container relative mx-auto flex min-h-screen w-full flex-col gap-8 p-8">
-
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
@@ -160,50 +149,7 @@ export default function IndexPage() {
               </FormItem>
             )}
           />
-          <FormField
-            key="cid"
-            control={form.control}
-            name="cid"
-            render={({ field }) => (
-              <FormItem className="flex shrink-0 items-center justify-start gap-2 space-y-0">
-                <FormLabel className="w-20 shrink-0">分类</FormLabel>
-                <Select
-                  onValueChange={field.onChange}
-                  defaultValue={field.value}
-                  value={field.value}
-                >
-                  <FormControl className="min-w-0">
-                    <SelectTrigger>
-                      <SelectValue placeholder="搜索分类" />
-                    </SelectTrigger>
-                  </FormControl>
-                  <SelectContent>
-                    {categoryMap.map((category) => (
-                      <SelectItem key={category.cid} value={category.cid}>
-                        {category.title}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            key="url"
-            control={form.control}
-            name="url"
-            render={({ field }) => (
-              <FormItem className="flex items-center justify-start gap-2 space-y-0">
-                <FormLabel className="w-20 shrink-0">Url</FormLabel>
-                <FormControl>
-                  <Input className="shrink-0" placeholder="url" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+          
           <FormField
             key="description"
             control={form.control}
@@ -262,25 +208,6 @@ export default function IndexPage() {
                     type="number"
                     className="shrink-0"
                     placeholder="rank"
-                    {...field}
-                  />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            key="status"
-            control={form.control}
-            name="status"
-            render={({ field }) => (
-              <FormItem className="flex items-center justify-start gap-2 space-y-0">
-                <FormLabel className="w-20 shrink-0">Status</FormLabel>
-                <FormControl>
-                  <Input
-                    type="number"
-                    className="shrink-0"
-                    placeholder="status"
                     {...field}
                   />
                 </FormControl>
