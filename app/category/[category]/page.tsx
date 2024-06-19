@@ -71,7 +71,7 @@ export default async function CategroyPage({
         <div className="fixed z-20 hidden min-h-screen w-64 transition-all duration-300 ease-in-out sm:block ">
           <Sidebar navItems={navItems} />
         </div>
-        <div className="sm:pl-64">
+        <div className="relative min-h-screen pb-20 sm:ml-64">
           <SiteHeader navItems={navItems} />
           <div className="my-8">
             <h2 className="mb-2 text-2xl font-bold text-primary/80 sm:text-3xl">

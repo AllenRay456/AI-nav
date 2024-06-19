@@ -38,7 +38,7 @@ export async function SiteHeader({ navItems }: SidebarProps) {
                   variant: "ghost",
                 })}
               >
-                <span className="text-red-400">AI导航博客</span>
+                <span className="text-red-400">AI专业教程</span>
               </div>
             </Link>
             {/* <ThemeToggle /> */}

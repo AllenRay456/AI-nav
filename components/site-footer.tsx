@@ -1,10 +1,17 @@
+import Link from "next/link";
+
 export function SiteFooter() {
   return (
-    <div className="relative mx-auto w-full text-sm md:px-6">
+    <div className="absolute bottom-0 mx-auto w-full text-sm md:px-6 ">
       <footer className="block py-4">
         <div className="mx-auto">
           <div className="mb-2 text-center md:mb-0">
-            发现最好用的垂直行业AI工具，助力社会中千千万万个你和我
+            发现最新最好用的通用和垂直 AI 工具
+          </div>
+          <Link href='/about' className="block text-center text-gray-800">关于我们</Link>
+          <div className="flex justify-center gap-x-4 text-red-400">
+            <Link href="https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e" target="blank">通往 AGI 之路</Link>|
+            <Link href="https://baoyu.io/blog" target="blank">宝玉的分享</Link>
           </div>
         </div>
       </footer>

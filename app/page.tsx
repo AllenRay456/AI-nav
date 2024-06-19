@@ -23,7 +23,7 @@ export default async function IndexPage() {
         <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block ">
          <Sidebar navItems={navItems} />
         </div>
-        <div className="sm:pl-[16rem]">
+        <div className="relative pb-20 sm:ml-[16rem]">
           <SiteHeader navItems={navItems} />
           <LinkContent navResources={navResources} />
           <SiteFooter />
