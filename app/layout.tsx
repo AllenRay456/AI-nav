@@ -13,7 +13,7 @@ import Script from 'next/script'
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s | AI导航站`,
+    template: `%s | AI专业导航站`,
   },
   description: siteConfig.description,
   keywords: siteConfig.keywords,
