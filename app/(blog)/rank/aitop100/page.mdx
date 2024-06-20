@@ -1,0 +1,42 @@
+import { rankAllData } from "@/config/rank"
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+export const metadata = {
+  title: '全球AI工具排行榜Top100',
+  description: '全球最受欢迎的AI工具排行榜Top100。从ChatGPT和NewBing到Canva AI和Google Gemini，了解这些AI工具的分类、预估流量及其月度变化。无论是AI聊天机器人、图像生成工具还是编程助手，这份榜单涵盖了各类AI技术的最新趋势。'
+}
+
+# 最新全球AI工具排行榜Top100
+
+    <Table>
+      <TableCaption>数据来源推友@FinanceYF5</TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-20">排行</TableHead>
+          <TableHead>产品名</TableHead>
+          <TableHead>分类</TableHead>
+          <TableHead>4月预估流量（Visits）</TableHead>
+          <TableHead>相对上月变化</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {rankAllData.map((data) => (
+          <TableRow key={data.rank}>
+            <TableCell className="font-medium">{data.rank}</TableCell>
+            <TableCell className="prose prose-slate">{data.product_name}</TableCell>
+            <TableCell>{data.category}</TableCell>
+            <TableCell>{data.estimated_visits_april}</TableCell>
+            <TableCell>{data.change_from_last_month}</TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+    </Table>
