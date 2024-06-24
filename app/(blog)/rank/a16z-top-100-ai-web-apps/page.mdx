@@ -1,0 +1,110 @@
+import Link from "next/link"
+
+import { a16zTopAppAI, a16zTopWebAI } from "@/config/rank"
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+export const metadata = {
+  title: "2023年度AI 工具排行榜Top100--by a16z",
+  description: "中文版 a16z对 2023 年度 热门 AI 工具的分析报告，包含Web端Top50 和 APP端Top50 工具"
+}
+
+# 2023 年度 AI 工具 Top100--by a16z
+
+自从 ChatGPT 将生成式 AI 引入公众视野已有一年多时间，我们见证了成千上万种新型消费者产品的诞生，这些产品利用了 AI 的神奇力量，从视频生成器到工作流程工具，从创意工具到虚拟伴侣。
+
+## 2023 年度 AI 工具WEB排行榜 Top50
+
+六个月前，我们深入分析了网络流量数据，以筛选出最受欢迎的生成式 AI 网页产品，并揭示了消费者实际使用这些技术的模式。当时有一些早期“赢家”——如 ChatGPT 和 Midjourney——吸引了广泛关注，但每个月都有新的 AI 原生公司出现，推动了一个动态、竞争激烈的市场。
+
+如今，六个月后，我们再次返回数据，更新了我们的分析，依据 SimilarWeb（截至 2024 年 1 月）的数据再次排名了前 50 名的 AI 优先网页产品。结果令人惊讶：与我们 2023 年 9 月的初次报告相比，名单上超过 40%的公司是新的。
+
+<Table>
+      <TableCaption> 引用 <Link href="https://a16z.com/100-gen-ai-apps/"> a16z分析报告 </Link> </TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-20">排行</TableHead>
+          <TableHead> AI工具名</TableHead>
+          <TableHead>链接</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {a16zTopWebAI.map((data) => (
+          <TableRow key={data.rank}>
+            <TableCell className="font-medium">{data.rank}</TableCell>
+            <TableCell className="prose prose-slate">{data.product}</TableCell>
+            <TableCell><Link href={data.link} target="blank">{data.link}</Link></TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+</Table>
+
+## 2023 年度 AI 工具APP排行榜 Top50
+与网络排名类似，移动应用按月活跃用户数量排序，数据来源于Sensor Tower（截至2024年1月）。这种区别首次让我们可以全面审视顶级AI移动应用。我们将深入探讨消费者如何在网络和移动设备上与生成式AI互动的显著差异。
+<Table>
+      <TableCaption> 引用 <Link href="https://a16z.com/100-gen-ai-apps/"> a16z分析报告 </Link> </TableCaption>
+      <TableHeader>
+        <TableRow>
+          <TableHead className="w-20">排行</TableHead>
+          <TableHead>AI工具名</TableHead>
+          <TableHead>Apple Store 地址</TableHead>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        {a16zTopAppAI.map((data) => (
+          <TableRow key={data.rank}>
+            <TableCell className="font-medium"><Link href={data.link} target="blank">{data.rank}</Link></TableCell>
+            <TableCell className="prose prose-slate">{data.product}</TableCell>
+            <TableCell><Link href={data.link} target="blank">地址</Link></TableCell>
+          </TableRow>
+        ))}
+      </TableBody>
+ </Table>
+
+除了这些排名本身固有的兴趣外，数据还揭示了几个值得注意的趋势，包括新兴和扩展的类别、AI投资和参与模式。以下是我们的主要发现：
+
+## 顶级AI应用程序的主要发现
+
+### 1. AI聊天机器人仍然领先
+
+ChatGPT在六个月前的分析中已经是全球第24大访问量网站，我们预期这个开创性的聊天机器人会继续保持榜首位置。确实，ChatGPT每月接近20亿次网页访问量，是榜单上第二名公司Bard（现为Gemini）的五倍。
+
+### 2. 新秀公司崛起
+
+在所谓的新秀公司中，排名最高的是AI研究助手Liner；Anthropic的通用助手Claude；以及三个未受限的AI伴侣应用：JanitorAI、Spicychat和CrushOn（更多关于AI伴侣激增的原因见下文）。
+
+### 3. 移动应用表现强劲
+
+我们的移动应用列表完全是新的。ChatGPT也在这里领先，但差距更小。按月活跃用户数计算，ChatGPT是排名第二和第三的微软Edge和Photomath的约2.5倍。
+
+## 生产力和音乐成为新兴类别
+
+### 1. 音乐生成工具
+
+Suno是唯一上榜的音乐公司，该工具可以根据文本提示在浏览器中生成原创歌曲——包括歌词，并支持多种风格。Suno最初是一个仅限Discord的产品，类似于Midjourney，但在2023年12月推出了独立网站和Copilot扩展。
+
+### 2. 生产力工具
+
+生产力类别包括排名中的七家公司：Liner、Eightify、Phind、MaxAI、Blackbox AI、Otter.ai和ChatPDF。这些公司专注于帮助员工、自由职业者和中小企业主更高效地完成任务。
+
+## AI伴侣的崛起
+
+拥有AI伴侣似乎是一个小众活动，但它已经成为生成式AI的主要用例。六个月前，只有两家公司上榜；在这次更新的分析中，网页上有八家公司，移动端有两家。
+
+## 移动应用中的独特类别
+
+移动应用的AI使用类别与网页产品显著不同。一般而言，网页产品支持更复杂的多步骤工作流程，而移动应用则倾向于通用助手，很多模仿ChatGPT。
+
+## 全球AI产品开发的多样性
+
+虽然大部分顶级生成式AI网页产品在湾区开发，但顶级移动应用的开发者却遍布全球。举例来说，总部位于伊斯坦布尔的应用工作室Codeway创造了多个热门AI应用，包括Face Dance、Chat & Ask AI和Wonder。
+
+这些趋势表明，一代新的AI原生产品和公司正在快速增长，并与用户建立了更深层次的互动。我们相信，在未来十年内，AI将成为定义各类公司的基础。

@@ -1053,3 +1053,509 @@ export const chinaAiProductTop50 = [
     change: "1391.39%",
   },
 ]
+
+export const a16zTopWebAI = [
+  {
+    rank: 1,
+    product: "ChatGPT",
+    link: "https://chat.openai.com/",
+  },
+  {
+    rank: 2,
+    product: "Gemini",
+    link: "https://gemini.google.com/",
+  },
+  {
+    rank: 3,
+    product: "Character.AI",
+    link: "https://beta.character.ai/",
+  },
+  {
+    rank: 4,
+    product: "Liner",
+    link: "https://getliner.com/",
+  },
+  {
+    rank: 5,
+    product: "QuillBot",
+    link: "http://quillbot.com",
+  },
+  {
+    rank: 6,
+    product: "Poe",
+    link: "http://poe.com/",
+  },
+  {
+    rank: 7,
+    product: "Perplexity",
+    link: "https://www.perplexity.ai/",
+  },
+  {
+    rank: 8,
+    product: "JanitorAI",
+    link: "http://janitorai.com/",
+  },
+  {
+    rank: 9,
+    product: "Civitai",
+    link: "http://civitai.com",
+  },
+  {
+    rank: 10,
+    product: "Claude",
+    link: "https://claude.ai/",
+  },
+  {
+    rank: 11,
+    product: "ElevenLabs",
+    link: "https://elevenlabs.io/",
+  },
+  {
+    rank: 12,
+    product: "Hugging Face",
+    link: "https://huggingface.co/",
+  },
+  {
+    rank: 13,
+    product: "Leonardo.AI",
+    link: "http://leonardo.ai/",
+  },
+  {
+    rank: 14,
+    product: "Midjourney",
+    link: "http://midjourney.com",
+  },
+  {
+    rank: 15,
+    product: "SpicyChat",
+    link: "http://spicychat.ai/",
+  },
+  {
+    rank: 16,
+    product: "Gamma",
+    link: "https://gamma.app/",
+  },
+  {
+    rank: 17,
+    product: "CrushOn AI",
+    link: "http://crushon.ai/",
+  },
+  {
+    rank: 18,
+    product: "Cutout.pro",
+    link: "https://www.cutout.pro/",
+  },
+  {
+    rank: 19,
+    product: "Pixlr",
+    link: "http://pixlr.com",
+  },
+  {
+    rank: 20,
+    product: "Veed.io",
+    link: "https://www.veed.io/",
+  },
+  {
+    rank: 21,
+    product: "PhotoRoom",
+    link: "http://photoroom.com/",
+  },
+  {
+    rank: 22,
+    product: "Yodayo",
+    link: "http://yodayo.com/",
+  },
+  {
+    rank: 23,
+    product: "Clipchamp",
+    link: "http://clipchamp.com/",
+  },
+  {
+    rank: 24,
+    product: "Runway",
+    link: "http://runwayml.com",
+  },
+  {
+    rank: 25,
+    product: "You.com",
+    link: "https://you.com/",
+  },
+  {
+    rank: 26,
+    product: "DeepAI",
+    link: "http://deepai.org/",
+  },
+  {
+    rank: 27,
+    product: "Eightify",
+    link: "https://eightify.app/",
+  },
+  {
+    rank: 28,
+    product: "Candy.ai",
+    link: "https://candy.ai/",
+  },
+  {
+    rank: 29,
+    product: "NightCafe",
+    link: "https://creator.nightcafe.studio/",
+  },
+  {
+    rank: 30,
+    product: "VocalRemover",
+    link: "https://vocalremover.org/",
+  },
+  {
+    rank: 31,
+    product: "Pixai",
+    link: "https://pixai.art/",
+  },
+  {
+    rank: 32,
+    product: "Ideogram",
+    link: "http://ideogram.ai/",
+  },
+  {
+    rank: 33,
+    product: "InVideo",
+    link: "http://invideo.io/",
+  },
+  {
+    rank: 34,
+    product: "Replicate",
+    link: "https://replicate.com/",
+  },
+  {
+    rank: 35,
+    product: "Playground",
+    link: "http://playgroundai.com/",
+  },
+  {
+    rank: 36,
+    product: "Suno",
+    link: "https://www.suno.ai/",
+  },
+  {
+    rank: 37,
+    product: "Chub.ai",
+    link: "http://chub.ai/",
+  },
+  {
+    rank: 38,
+    product: "Speechify",
+    link: "http://speechify.com/",
+  },
+  {
+    rank: 39,
+    product: "Phind",
+    link: "http://phind.com/",
+  },
+  {
+    rank: 40,
+    product: "NovelAI",
+    link: "http://novelai.net/",
+  },
+  {
+    rank: 41,
+    product: "MaxAI",
+    link: "http://maxai.me/",
+  },
+  {
+    rank: 42,
+    product: "Craiyon",
+    link: "http://craiyon.com/",
+  },
+  {
+    rank: 43,
+    product: "OpusClip",
+    link: "http://opus.pro",
+  },
+  {
+    rank: 44,
+    product: "Blackbox AI",
+    link: "https://www.blackbox.ai/",
+  },
+  {
+    rank: 45,
+    product: "ChatPDF",
+    link: "https://www.chatpdf.com/",
+  },
+  {
+    rank: 46,
+    product: "Pixelcut",
+    link: "http://pixelcut.ai/",
+  },
+  {
+    rank: 47,
+    product: "Vectorizer.AI",
+    link: "https://vectorizer.ai/",
+  },
+  {
+    rank: 48,
+    product: "DreamGF",
+    link: "https://dreamgf.ai/",
+  },
+  {
+    rank: 49,
+    product: "Photomyne",
+    link: "https://photomyne.com/",
+  },
+  {
+    rank: 50,
+    product: "Otter.ai",
+    link: "http://otter.ai/",
+  },
+]
+
+export const a16zTopAppAI = [
+  {
+    rank: 1,
+    product: "ChatGPT",
+    link: "https://apps.apple.com/us/app/chatgpt/id6448311069",
+  },
+  {
+    rank: 2,
+    product: "Microsoft Edge",
+    link: "https://apps.apple.com/us/app/microsoft-edge-ai-browser/id1288723196",
+  },
+  {
+    rank: 3,
+    product: "Photomath",
+    link: "https://apps.apple.com/us/app/photomath/id919087726",
+  },
+  {
+    rank: 4,
+    product: "Bing",
+    link: "https://apps.apple.com/us/app/bing-chat-with-ai-gpt-4/id345323231",
+  },
+  {
+    rank: 5,
+    product: "Remini",
+    link: "https://apps.apple.com/us/app/remini-ai-photo-enhancer/id1470373330",
+  },
+  {
+    rank: 6,
+    product: "Brainly",
+    link: "https://apps.apple.com/us/app/brainly-ai-homework-helper/id745089947",
+  },
+  {
+    rank: 7,
+    product: "NOVA",
+    link: "https://apps.apple.com/us/app/ai-chatbot-nova/id1669007652",
+  },
+  {
+    rank: 8,
+    product: "Chat & Ask AI",
+    link: "https://apps.apple.com/us/app/chat-ask-ai-by-codeway/id1668787639",
+  },
+  {
+    rank: 9,
+    product: "Facemoji",
+    link: "https://apps.apple.com/us/app/facemoji-ai-emoji-keyboard/id1103138272",
+  },
+  {
+    rank: 10,
+    product: "EPIK",
+    link: "https://apps.apple.com/us/app/epik-ai-photo-video-editor/id1577705074",
+  },
+  {
+    rank: 11,
+    product: "Photoroom",
+    link: "https://apps.apple.com/us/app/photoroom-ai-photo-editor/id1455009060",
+  },
+  {
+    rank: 12,
+    product: "Remove It",
+    link: "https://play.google.com/store/apps/details?id=com.vyroai.objectremover&hl=en_US",
+  },
+  {
+    rank: 13,
+    product: "Evoke AI",
+    link: "https://apps.apple.com/us/app/ai-photo-enhancer-evoke/id6450504740",
+  },
+  {
+    rank: 14,
+    product: "AI Chatbot: AI Chat Smith 4",
+    link: "https://apps.apple.com/us/app/ai-chatbot-ai-chat-smith-4/id1559479889",
+  },
+  {
+    rank: 15,
+    product: "ChatBot",
+    link: "https://chatbot-ai-chat.en.softonic.com/",
+  },
+  {
+    rank: 16,
+    product: "character.ai",
+    link: "https://apps.apple.com/us/app/character-ai-ai-powered-chat/id1671705818",
+  },
+  {
+    rank: 17,
+    product: "AI Mirror",
+    link: "https://apps.apple.com/us/app/ai-mirror-ai-art-photo-editor/id6444888896",
+  },
+  {
+    rank: 18,
+    product: "ChatOn",
+    link: "https://apps.apple.com/us/app/chaton-ai-chat-bot-assistant/id1661308505",
+  },
+  {
+    rank: 19,
+    product: "QANDA",
+    link: "https://apps.apple.com/us/app/qanda-instant-math-helper/id1270676408",
+  },
+  {
+    rank: 20,
+    product: "Face Dance",
+    link: "https://apps.apple.com/us/app/face-dance-ai-photo-animator/id1589749730",
+  },
+  {
+    rank: 21,
+    product: "Beat.ly",
+    link: "https://play.google.com/store/apps/details?id=vinkle.video.editor",
+  },
+  {
+    rank: 22,
+    product: "Photo AI",
+    link: "https://apps.apple.com/us/app/photoai-ai-photo-enhancer/id1590124720",
+  },
+  {
+    rank: 23,
+    product: "Hypic",
+    link: "https://apps.apple.com/us/app/hypic-photo-editor-ai-art/id1644042837",
+  },
+  {
+    rank: 24,
+    product: "Al Quran",
+    link: "https://apps.apple.com/us/app/al-quran-tafsir-by-word/id1437038111",
+  },
+  {
+    rank: 25,
+    product: "ArtMind",
+    link: "https://apps.apple.com/us/app/artmind/id6477348273",
+  },
+  {
+    rank: 26,
+    product: "SnapEdit",
+    link: "https://play.google.com/store/apps/details?id=snapedit.app.remove",
+  },
+  {
+    rank: 27,
+    product: "Imagine",
+    link: "https://apps.apple.com/us/app/imagine-ai-art-generator/id1664121419",
+  },
+  {
+    rank: 28,
+    product: "Question AI",
+    link: "https://apps.apple.com/us/app/question-ai-ai-math-calculator/id6449486871",
+  },
+  {
+    rank: 29,
+    product: "ChatBox",
+    link: "https://apps.apple.com/us/app/chatbox-ask-ai-chatbot/id6447763703",
+  },
+  {
+    rank: 30,
+    product: "DaVinci",
+    link: "https://apps.apple.com/us/app/davinci-ai-image-generator/id1630366866",
+  },
+  {
+    rank: 31,
+    product: "Bobble AI",
+    link: "https://apps.apple.com/us/app/bobble-ai-keyboard-assistant/id972432964",
+  },
+  {
+    rank: 32,
+    product: "reface",
+    link: "https://apps.apple.com/us/app/reface-ai-photo-generator/id1488782587?ppid=eb3a176a-5e0e-42f2-99f5-78428b29eace",
+  },
+  {
+    rank: 33,
+    product: "PhotoApp",
+    link: "https://apps.apple.com/us/app/photoapp-ai-photo-enhancer/id1596089614",
+  },
+  {
+    rank: 34,
+    product: "Prequel",
+    link: "https://apps.apple.com/us/app/prequel-photo-video-editor/id1325756279",
+  },
+  {
+    rank: 35,
+    product: "Mathway",
+    link: "https://apps.apple.com/us/app/mathway-math-problem-solver/id467329677",
+  },
+  {
+    rank: 36,
+    product: "Poly.AI",
+    link: "https://apps.apple.com/us/app/poly-ai-create-ai-chat-bot/id6449190344",
+  },
+  {
+    rank: 37,
+    product: "Genie",
+    link: "https://apps.apple.com/us/app/genie-ai-chatbot-keyboard/id1658377526",
+  },
+  {
+    rank: 38,
+    product: "Photoleap",
+    link: "https://apps.apple.com/us/app/photoleap-ai-art-photo-editor/id1191337894",
+  },
+  {
+    rank: 39,
+    product: "Wonder",
+    link: "https://apps.apple.com/us/app/wonder-ai-art-generator/id1621278575",
+  },
+  {
+    rank: 40,
+    product: "Copilot",
+    link: "https://apps.apple.com/us/app/microsoft-copilot/id6472538445",
+  },
+  {
+    rank: 41,
+    product: "Chat AI",
+    link: "https://play.google.com/store/apps/details?id=com.ai.chat.bot.aichat",
+  },
+  {
+    rank: 42,
+    product: "ELSA",
+    link: "https://apps.apple.com/us/app/elsa-speak-english-learning/id1083804886",
+  },
+  {
+    rank: 43,
+    product: "AI ARTA",
+    link: "https://apps.apple.com/us/app/arta-ai-photo-generator-al-art/id1642969698",
+  },
+  {
+    rank: 44,
+    product: "AI Chat",
+    link: "https://apps.apple.com/us/app/ai-chat-assistant-chatbot/id1667518571",
+  },
+  {
+    rank: 45,
+    product: "Revive",
+    link: "https://apps.apple.com/us/app/revive-ai-photo-dance-maker/id1616862692",
+  },
+  {
+    rank: 46,
+    product: "LISA AI",
+    link: "https://apps.apple.com/us/app/lisa-ai-retro-wedding-avatar/id6443832829",
+  },
+  {
+    rank: 47,
+    product: "PIXELCUT",
+    link: "https://apps.apple.com/us/app/pixelcut-ai-photo-editor/id1534785237",
+  },
+  {
+    rank: 48,
+    product: "AI Chat - Assistant",
+    link: "https://apps.apple.com/us/app/ai-chat-assistant-chatbot/id1667518571",
+  },
+  {
+    rank: 49,
+    product: "Poe",
+    link: "https://apps.apple.com/us/app/poe-fast-ai-chat/id1640745955",
+  },
+  {
+    rank: 50,
+    product: "Replika",
+    link: "https://apps.apple.com/us/app/replika-my-ai-friend/id1158555867",
+  },
+]
