@@ -14,7 +14,7 @@ export function SiteFooter() {
             <Link href="https://baoyu.io/blog" target="blank">宝玉的分享</Link>|
             <Link href="/rank/aitop100" target="blank">全球AI工具Top100</Link>|
             <Link href="/rank/china-ai-top50" target="blank">中国AI工具Top50</Link>|
-            <Link href="/rank/a16z-top-100-ai-web-apps" target="blank">2023年度AI工具Top100</Link>
+            <Link href="/rank/a16z-top-100-ai-apps" target="blank">2023年度AI工具Top100</Link>
           </div>
         </div>
       </footer>
