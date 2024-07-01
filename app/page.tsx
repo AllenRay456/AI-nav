@@ -18,7 +18,7 @@ export default async function IndexPage() {
       key: n.key,
     }
   })
-  return <div className="container relative mx-auto min-h-screen w-full px-0">
+  return <div className="container relative mx-auto min-h-screen w-full">
       <div className="flex">
         <div className="fixed z-20 hidden min-h-screen w-[16rem] transition-all duration-300 ease-in-out sm:block ">
          <Sidebar navItems={navItems} />

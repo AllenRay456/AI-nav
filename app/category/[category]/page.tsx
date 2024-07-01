@@ -66,7 +66,7 @@ export default async function CategroyPage({
   })
 
   return (
-    <div className="container relative mx-auto min-h-screen w-full px-4">
+    <div className="container relative mx-auto min-h-screen w-full">
       <div className="flex">
         <div className="fixed z-20 hidden min-h-screen w-64 transition-all duration-300 ease-in-out sm:block ">
           <Sidebar navItems={navItems} />
