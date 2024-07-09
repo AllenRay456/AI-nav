@@ -1,0 +1,126 @@
+import { globalAiAPPProductTop100202406, globalAiProductTop100202406, chinaAiProductTop50202406, chinaAiSeaProductTop50202406 } from "@/config/rank"
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+
+export const metadata = {
+  title: '2024年6月全球AI工具排行榜',
+  description: '了解2024年6月全球AI工具排行榜，覆盖全球AI工具Top100、AI APP增长榜Top100、国内AI工具Top50及国内出海AI工具Top50。分析ChatGPT、百度文库AI功能、CrushOn等热门AI应用的最新排名及增长趋势，助您掌握AI行业最新动态。立即探索，提升工作效率和创新能力'
+}
+
+# 2024年6月全球AI工具排行榜
+##    顶级AI工具、APP及国内出海工具增长趋势分析
+欢迎来到2024年6月全球AI工具排行榜页面！我们精心整理了最新、最全面的AI工具排名信息，包括全球AI工具Top100、全球AI APP增长榜Top100、国内AI工具Top50以及国内出海AI工具Top50。无论您是AI开发者、研究人员还是AI爱好者，这里都是获取AI工具最新信息的最佳平台。
+
+## 全球 AI 工具排行榜 Top100
+在全球AI工具排行榜中，ChatGPT以2.95亿次访问量稳居第一，显示出其在AI聊天机器人领域的主导地位，并且增长了14.87%。New Bing以1.36亿次访问量位居第二，尽管访问量下降了5.67%，但仍然保持强势。Canva Text to Image、Character AI和Gemini等工具也名列前茅，涵盖了从设计工具到角色生成器和翻译工具等多个领域。Character AI增长了13.83%，而Gemini则下降了19.06%。无论您需要的是AI写作助手还是图像生成器，这里的榜单都能为您提供最权威的参考。
+<Table>
+  <TableCaption>引用 AI产品榜（官网：aicpb.com）</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-20">排行</TableHead>
+      <TableHead>产品名</TableHead>
+      <TableHead>分类</TableHead>
+      <TableHead>6月预估流量（Visits）</TableHead>
+      <TableHead>相对上月变化</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {globalAiProductTop100202406.map((data) => (
+      <TableRow key={data.rank}>
+        <TableCell className="font-medium">{data.rank}</TableCell>
+        <TableCell className="prose prose-slate">{data.product}</TableCell>
+        <TableCell>{data.category}</TableCell>
+        <TableCell>{data.visits}</TableCell>
+        <TableCell>{data.change}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+## 全球 AI APP 增长榜 Top100
+在全球AI APP增长榜中，ChatGPT再次位居榜首，显示出其在生产力工具中的领先地位，访问量增长了4.17%。Remini和Canva分别以15.19M和13M的访问量紧随其后，但访问量分别下降了26.32%和14.29%。其他如豆包（字节）和PhotoRoom等应用也在榜单中占据重要位置，其中豆包（字节）的访问量增长了200%，而PhotoRoom增长了50%。这些数据反映了用户对高效工具和创新技术的不断追求和市场的动态变化。
+<Table>
+  <TableCaption>引用 AI产品榜（官网：aicpb.com）</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-20">排行</TableHead>
+      <TableHead>产品名</TableHead>
+      <TableHead>分类</TableHead>
+      <TableHead>6月预估流量（Visits）</TableHead>
+      <TableHead>相对上月变化</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {globalAiAPPProductTop100202406.map((data) => (
+      <TableRow key={data.rank}>
+        <TableCell className="font-medium">{data.rank}</TableCell>
+        <TableCell className="prose prose-slate">{data.product}</TableCell>
+        <TableCell>{data.category}</TableCell>
+        <TableCell>{data.visits}</TableCell>
+        <TableCell>{data.change}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+
+## 国内 AI 工具 Top50
+在国内市场，百度文库AI功能和360AI搜索分别以60.63M和51.34M的访问量位列前两名，展现了强大的用户基础和广泛的应用。天工AI（昆仑万维）以59.37%的显著增长率位居第三。Kimi（月之暗面）和百度文心一言等工具也在国内市场中占据重要地位，尽管百度文心一言的访问量下降了6.58%。其他如秘塔AI搜索和阿里通义千问的访问量分别下降了26.71%和增长了0.73%，显示出市场的变化和用户偏好的转变。
+<Table>
+  <TableCaption>引用 AI产品榜（官网：aicpb.com）</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-20">排行</TableHead>
+      <TableHead>产品名</TableHead>
+      <TableHead>分类</TableHead>
+      <TableHead>6月预估流量（Visits）</TableHead>
+      <TableHead>相对上月变化</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {chinaAiProductTop50202406.map((data) => (
+      <TableRow key={data.rank}>
+        <TableCell className="font-medium">{data.rank}</TableCell>
+        <TableCell className="prose prose-slate">{data.product}</TableCell>
+        <TableCell>{data.category}</TableCell>
+        <TableCell>{data.visits}</TableCell>
+        <TableCell>{data.change}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
+## 国内出海 AI 工具 Top50
+在国内出海的AI工具中，CrushOn、Fotor和Cutout Pro凭借其卓越的性能和用户体验，成功吸引了大量国际用户，分别以18.77M、14.44M和14.4M的访问量位列前三，其中CrushOn和Fotor分别增长了5.22%和Cutout Pro下降了8.40%。其他如SeaArt和PixAI.Art的访问量分别增长了1.86%和7.23%，展示了中国AI技术的强大竞争力和广泛影响力。PicWish也表现出色，访问量增长了9.45%。
+<Table>
+  <TableCaption>引用 AI产品榜（官网：aicpb.com）</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead className="w-20">排行</TableHead>
+      <TableHead>产品名</TableHead>
+      <TableHead>分类</TableHead>
+      <TableHead>6月预估流量（Visits）</TableHead>
+      <TableHead>相对上月变化</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    {chinaAiSeaProductTop50202406.map((data) => (
+      <TableRow key={data.rank}>
+        <TableCell className="font-medium">{data.rank}</TableCell>
+        <TableCell className="prose prose-slate">{data.product}</TableCell>
+        <TableCell>{data.category}</TableCell>
+        <TableCell>{data.visits}</TableCell>
+        <TableCell>{data.change}</TableCell>
+      </TableRow>
+    ))}
+  </TableBody>
+</Table>
+
